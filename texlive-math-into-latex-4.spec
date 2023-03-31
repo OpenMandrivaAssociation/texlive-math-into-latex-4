@@ -1,6 +1,6 @@
 Name:		texlive-math-into-latex-4
 Version:	44131
-Release:	1
+Release:	2
 Summary:	Samples from Math into LaTeX, 4th Edition
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/math-into-latex-4
