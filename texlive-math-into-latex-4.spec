@@ -3,7 +3,7 @@ Version:	44131
 Release:	2
 Summary:	Samples from Math into LaTeX, 4th Edition
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/math-into-latex-4
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/math-into-latex-4
 License:	other-free
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/math-into-latex-4.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/math-into-latex-4.doc.r%{version}.tar.xz
