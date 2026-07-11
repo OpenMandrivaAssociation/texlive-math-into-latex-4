@@ -1,38 +1,22 @@
-Name:		texlive-math-into-latex-4
-Version:	44131
-Release:	2
+%global tl_name math-into-latex-4
+%global tl_revision 44131
+
+Name:		texlive-%{tl_name}
+Version:	%{tl_revision}
+Release:	1
 Summary:	Samples from Math into LaTeX, 4th Edition
 Group:		Publishing
-URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/math-into-latex-4
+URL:		https://www.ctan.org/tex-archive/info/examples/Math_into_LaTeX-4
 License:	other-free
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/math-into-latex-4.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/math-into-latex-4.doc.r%{version}.tar.xz
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/math-into-latex-4.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/math-into-latex-4.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-Samples for the book `(More) Math into LaTeX', 4th edition. In
-addition, there are two excerpts from the book: A Short Course
-to help you get started quickly with LaTeX, including detailed
-instructions on how to install LaTeX on a PC or a Mac; Math and
-Text Symbol Tables.
+Samples for the book `(More) Math into LaTeX', 4th edition. In addition,
+there are two excerpts from the book: A Short Course to help you get
+started quickly with LaTeX, including detailed instructions on how to
+install LaTeX on a PC or a Mac; Math and Text Symbol Tables.
 
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-rm -rf tlpkg
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -a * %{buildroot}%{_texmfdistdir}
-
-%files
-%doc %{_texmfdistdir}/doc/latex/math-into-latex-4
-
-%post -p %{_sbindir}/texlive.post
-
-%postun
-[ "$1" -eq 0 ] && %{_sbindir}/texlive.post
